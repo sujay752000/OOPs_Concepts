@@ -19,9 +19,18 @@ class Student:  # class ClassName
         self.student_roll = rollno            # instance attribute
         self.student_name = name              # instance attribute
         print("Constructor is invoked")
+        print(f"Object = {self}")        # object address
+
+
+
+    def __str__(self):                  # used to represent an object in a string format
+        return f"object named as {self.student_name}"
+
+
 
 
 
 Student_1 = Student(55, "Sujay Prasad")
 print(Student_1.college, Student_1.student_roll, Student_1.student_name)
 
+print(Student_1)        # object address
